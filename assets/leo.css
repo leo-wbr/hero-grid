@@ -1,0 +1,23 @@
+:root {
+  /*** Default ***/
+  --event-font-primary: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important;
+  --event-font-secondary: 'Poppins', sans-serif !important;
+  --event-color-primary: #ff495a !important;
+  --event-color-secondary: #d42838 !important;
+  --event-info-onscroll: #2855a3 !important;
+  --event-header-color: #666 !important;
+
+  --event-hero: url('http://source.unsplash.com/random/1400x750') center center scroll no-repeat #999;
+  --event-inner-page-strip: url('http://source.unsplash.com/random/1400x450') center center scroll no-repeat #999;
+}
+
+/*** --fg ***/ /*** --accent ***/
+/*** --bg-full ***/ /*** --bg-full-p-y ***/
+/*** --bg-nav ***/
+/*** --bg-tabs ***/ /*** --bg-tabs-p-y ***/ /*** --bg-tabs-p-x ***/
+/*** --fg-tab ***/
+/*** --fg-rev ***/ /*** --fg-rev-scroll ***/
+/*** --logo ***/ /*** --fs ***/
+/*** --btn-bg ***/ /*** --btn-bg-hover ***/ /*** --btn-fg ***/ /*** --btn-fg-hover ***/
+
+/* .front .header-bottom */

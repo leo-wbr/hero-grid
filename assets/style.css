@@ -1,0 +1,252 @@
+/*
+Site Name: LogiCon Connect EU
+Cycle: BS4
+Office: USA
+Year: 2022
+URL: http://logiconconnect.wbresearch.com
+----------------------------------------------------------------*/
+
+:root {
+  --spacer-sm: 0.5em;
+  --spacer-md: 1em;
+  --fs-300: 0.75em;
+  --fs-400: 0.85em;
+  --fs-500: 1em;
+  --br-xs: 0.05em;
+  --br-sm: 0.25em;
+
+  /* Start Template */
+  --event-neutral-100: #fff;
+  --event-neutral-200: #ececec;
+  --event-neutral-300: #bfbfbf;
+  --event-neutral-500: #7f7f7f;
+  --event-neutral-700: #404040;
+  --event-neutral-900: #333;
+  --event-color-accent: #000000;
+}
+
+body header > .header-bottom {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  padding: var(--bg-full-p-y, inherit) 0;
+  max-height: 100vh;
+  top: 0;
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  body header > .header-bottom {
+    overflow-x: initial;
+  }
+}
+body.front header > .header-bottom {
+  background: var(--bg-full, transparent);
+}
+body.front header > .header-bottom.on-scroll {
+  background: var(--bg-full, var(--event-neutral-100));
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+body.not-front header > .header-bottom {
+  background: var(--bg-full, var(--event-neutral-100));
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+/* MOBILE - Setting Hambuger and logo to flex and styling */
+body header > .header-bottom .navbar-header {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Make Logo and Hamburger white, on hover revert to regular color */
+body.front header > .header-bottom .navbar-header {
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+}
+
+body.front header > .header-bottom.on-scroll .navbar-header {
+  filter: none;
+  -webkit-filter: none;
+}
+
+body header > .header-bottom .navbar-header .navbar-brand {
+  order: 1;
+}
+
+body header > .header-bottom .navbar-header .navbar-brand img {
+  max-width: var(--logo, 165px);
+}
+
+body header > .header-bottom .navbar-header .navbar-toggle {
+  order: 2;
+  /* Hamburger Styling */
+  height: 45px;
+  width: 45px;
+  border-radius: var(--br-sm);
+  background: transparent;
+  border: 1px double var(--accent, var(--event-neutral-900));
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+body header > .header-bottom .navbar-header .navbar-toggle .icon-bar {
+  outline: 1px solid var(--accent, var(--event-neutral-900));
+  width: 100%;
+}
+
+/* Styling Navigation after Hamburger is clicked*/
+body header > .header-bottom .navbar-collapse .navbar-nav {
+  background-color: var(--bg-nav, var(--event-neutral-200));
+  padding: var(--spacer-md);
+  border-radius: var(--br, var(--br-sm));
+  text-align: center;
+}
+body header > .header-bottom .navbar-collapse[class*='coll'] .navbar-nav .dropdown-menu.show {
+  display: flex;
+  flex-flow: column;
+  text-align: inherit;
+}
+
+/* Adding Padding to Tabs */
+body header > .header-bottom .navbar-collapse[class*='coll'] li a {
+  padding: var(--bg-tabs-p-y, var(--spacer-md)) var(--bg-tabs-p-x, var(--spacer-md));
+}
+
+/* Color / Typography */
+body header .header-bottom .navbar-nav > li > a,
+body header .header-bottom .navbar-nav > li > .dropdown-menu li a {
+  display: block;
+  font-size: var(--fs, var(--fs-500));
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--ff, var(--event-font-primary));
+}
+
+body header .header-bottom .navbar-nav > li > a {
+  font-weight: 600;
+  color: var(--fg-primary, var(--event-neutral-900));
+}
+
+body header .header-bottom .navbar-nav > li > .dropdown-menu li a {
+  font-weight: 500;
+  color: var(--fg-secondary, var(--event-neutral-900));
+}
+
+body header > .header-bottom .navbar-collapse[class*='coll'] ul > li:hover > a,
+body header > .header-bottom.on-scroll .navbar-collapse[class*='coll'] ul > li:hover > a,
+body header > .header-bottom .navbar-collapse[class*='coll'] ul > li > a[aria-expanded='true'],
+body header > .header-bottom .navbar-collapse[class*='coll'] ul > li > .dropdown-menu li:hover,
+body header > .header-bottom .navbar-collapse[class*='coll'] ul > li > .dropdown-menu li:hover a {
+  background: var(--bg-tabs, var(--event-neutral-500));
+  border-radius: var(--br, var(--br-sm));
+  color: var(--fg-tabs, var(--event-neutral-100));
+}
+
+body header > .header-bottom .navbar-collapse[class*='coll'] li > a[aria-expanded='true'] + .dropdown-menu.show {
+  outline: 1px solid var(--bg-tabs, var(--event-neutral-500));
+}
+
+body header > .header-bottom .navbar-collapse[class*='coll'] .dropdown-menu li:nth-child(even) {
+  background: var(--event-neutral-200);
+}
+
+/* Styling CTA Button */
+
+body header > .header-bottom .navbar-collapse[class*='coll'] .navbar-nav > .nav_top:last-of-type > a {
+  background-color: var(--btn-bg, var(--event-neutral-900));
+  color: var(--btn-fg, var(--event-neutral-100));
+  padding: var(--bg-tabs-p-y, var(--spacer-md)) var(--bg-tabs-p-x, calc(var(--spacer-md) * 3));
+  border-radius: var(--br, var(--br-sm));
+}
+body header > .header-bottom .navbar-collapse[class*='coll'] .navbar-nav > .nav_top:last-of-type > a:hover {
+  background-color: var(--btn-bg-hover, var(--event-neutral-700));
+  color: var(--btn-fg-hover, var(--event-neutral-100));
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Hide Hamburger */
+  body header .header-bottom .navbar-header .navbar-toggle {
+    display: none;
+  }
+  body header .collapse:not(.show) {
+    display: block;
+  }
+
+  /* Subnav on Hover - Desktop */
+  body header .header-bottom .navbar-collapse .navbar-nav .dropdown-menu {
+    position: absolute;
+    width: max-content;
+  }
+
+  body header .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  body header .dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+  }
+
+  /*  Adding Flex Functionality to desktop view*/
+  body header > .header-bottom .navbar {
+    flex-flow: row;
+  }
+  body header > .header-bottom .navbar-header {
+    width: inherit;
+  }
+  body header > .header-bottom .navbar-collapse .navbar-nav {
+    background: transparent;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  /* Link Color */
+  body header .header-bottom .navbar-nav > li > a {
+    color: var(--fg-primary, var(--event-neutral-100));
+  }
+  body header .header-bottom.on-scroll .navbar-nav > li > a {
+    color: var(--fg-primary, var(--event-neutral-900));
+  }
+  body.not-front header .header-bottom .navbar-nav > li > a {
+    color: var(--fg-inner, var(--event-neutral-900));
+  }
+
+  /* Update Font sizes on scroll */
+  body header > .header-bottom.on-scroll .navbar-collapse .navbar-nav li a {
+    font-size: var(--fs, clamp(0.625rem, -0.0417rem + 1.3889vw, 1rem));
+  }
+
+  /* Button Styling  */
+  body header > .header-bottom .navbar-collapse[class*='coll'] .navbar-nav > .nav_top:last-of-type a {
+    padding: var(--bg-tabs-p-y, calc(var(--spacer-sm) * 1.5)) var(--bg-tabs-p-x, calc(var(--spacer-md) * 1.75));
+  }
+
+  /* Styling Hiding on Scroll */
+  body.front header > .header-bottom .navbar-header {
+    max-width: 0px;
+    transform: translateY(-100vh);
+    transition: all 0.2s ease-out;
+  }
+  body.front header > .header-bottom.on-scroll .navbar-header {
+    max-width: inherit;
+    transform: translateY(0);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body header > .header-bottom .navbar-collapse .navbar-nav > li > a {
+    font-size: var(--fs, var(--fs-500));
+  }
+}
