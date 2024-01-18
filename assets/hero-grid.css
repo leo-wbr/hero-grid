@@ -1,0 +1,72 @@
+.header-top {
+  background: none;
+  background-color: rgb(231, 231, 231);
+  box-shadow: none;
+}
+
+header:before,
+header:after {
+  display: none !important;
+}
+
+/* Make header .container behave like .container-fluid */
+.front .pageheader {
+  width: 100vw;
+  height: 100%;
+}
+
+.front .pageheader .header-middle {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.front .pageheader .header-middle,
+.front .pageheader .header-middle > .container,
+.front .pageheader .header-middle > .container > .row,
+.front .pageheader .header-middle > .container > .row > #header_left {
+  width: inherit;
+  height: inherit;
+}
+
+.front .pageheader .header-middle > .container > .row {
+  display: block;
+}
+
+.front .pageheader .header-middle > .container {
+  max-width: 100%;
+}
+
+.front .pageheader .header-middle #header_left {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+/* Image Styling */
+.front #header_left {
+  transform: rotate(-15deg) scale(1.35);
+}
+
+.front #header_left img {
+  object-fit: cover;
+  mix-blend-mode: exclusion;
+  /* opacity: 0.5; */
+  outline: 3px solid orange;
+  transition: all 0.25s ease-out;
+  border-radius: 0.05em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.js .front #header_left img {
+  opacity: 0;
+  transform: translateY(-1000vh);
+}
+
+.front #header_left img:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.025);
+  outline: 5px solid white;
+  mix-blend-mode: normal;
+}
